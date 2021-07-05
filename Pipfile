@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+fabric = "*"
+coverage = "*"
+
+[packages]
+django = "~=2.2"
+markdown = "*"
+gunicorn = "*"
+faker = "*"
+django-pure-pagination = "*"
+elasticsearch = ">=2,<3"
+django-haystack = "*"
+djangorestframework = "*"
+django-filter = "*"
+drf-haystack = "*"
+drf-extensions = "*"
+django-redis-cache = "*"
+drf-yasg = "*"
+
+[requires]
+python_version = "3"
