@@ -169,11 +169,11 @@ class PostViewSet(
             self.action, super().get_serializer_class()
         )
 
-    @cache_response(timeout=5 * 60, key_func=PostListKeyConstructor())
+    # @cache_response(timeout=5 * 60, key_func=PostListKeyConstructor())
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @cache_response(timeout=5 * 60, key_func=PostObjectKeyConstructor())
+    # @cache_response(timeout=5 * 60, key_func=PostObjectKeyConstructor())
     def retrieve(self, request, *args, **kwargs):
         # 重写retrieve方法，增加阅读量+1的操作
         instance = self.get_object()
@@ -197,7 +197,7 @@ class PostViewSet(
         # <Response status_code=200, "text/html; charset=utf-8">
         return Response(data=data, status=status.HTTP_200_OK)
 
-    @cache_response(timeout=5 * 60, key_func=CommentListKeyConstructor())
+    # @cache_response(timeout=5 * 60, key_func=CommentListKeyConstructor())
     @action(
         methods=["GET"],
         detail=True,
