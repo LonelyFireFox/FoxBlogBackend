@@ -8,7 +8,7 @@ ALLOWED_HOSTS = [
     # "hellodjango-blog-tutorial-demo.zmrenwu.com",
     "127.0.0.1",
     "192.168.10.73",
-    "192.144.213.31"
+    "159.75.47.15"
 ]
 HAYSTACK_CONNECTIONS["default"]["URL"] = "http://elasticsearch:9200/"
 
