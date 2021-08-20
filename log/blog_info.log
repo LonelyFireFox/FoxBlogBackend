@@ -1,0 +1,3 @@
+[2021-07-31 15:05:54,595][MainThread:22752][task_id:django.utils.autoreload][autoreload.py:597][INFO][Watching for file changes with StatReloader]
+[2021-08-20 21:17:33,823][MainThread:16300][task_id:django.utils.autoreload][autoreload.py:597][INFO][Watching for file changes with StatReloader]
+[2021-08-20 21:19:24,995][Thread-4:25820][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
