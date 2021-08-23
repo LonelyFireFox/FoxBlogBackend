@@ -14,6 +14,7 @@ from django.utils.functional import cached_property
 from django.utils.html import strip_tags
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
+from mdeditor.fields import MDTextField
 
 
 def generate_rich_content(value):
@@ -118,7 +119,7 @@ class Post(BaseModel):
 
     # 文章正文，我们使用了 TextField。
     # 存储比较短的字符串可以使用 CharField，但对于文章的正文来说可能会是一大段文本，因此使用 TextField 来存储大段文本。
-    body = models.TextField("正文")
+    body = MDTextField() # models.TextField("正文")
 
     # 这两个列分别表示文章的创建时间和最后一次修改时间，存储时间的字段用 DateTimeField 类型。
     # 已过期，已建立BaseModel，包含这两个字段，新建模型继承即可

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "comments.apps.CommentsConfig",  # 注册 comments 应用
     # "django.contrib.sites",
     'corsheaders',  # 跨域
+    'mdeditor', # 注册markdown的应用
 ]
 
 MIDDLEWARE = [
@@ -285,3 +286,6 @@ LOGGING = {
         }
     },
 }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -23,6 +23,9 @@ import blog.views
 import comments.views
 from blog.feeds import AllPostsRssFeed
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 router = routers.DefaultRouter()
 router.register(r"posts", blog.views.PostViewSet, basename="post")
 router.register(r"categories", blog.views.CategoryViewSet, basename="category")
@@ -71,4 +74,9 @@ urlpatterns = [
         name="schema-swagger-ui",
     ),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
+    path('mdeditor/', include('mdeditor.urls'))
 ]
+
+if settings.DEBUG:
+    # 如果是调试模式
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
